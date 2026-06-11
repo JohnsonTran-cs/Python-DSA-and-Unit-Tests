@@ -39,7 +39,6 @@ class DynamicArray(DynamicArrayInterface):
         if(self._capacity == self._size):
             self.resize()
         self._arr[self._size] = n
-        
 
     def popback[T](self) -> T:
         """Remove a number (n) at the end of the array. Resize if needed.
@@ -69,6 +68,7 @@ class DynamicArray(DynamicArrayInterface):
     def resize[T](self) -> None:
         """Resize the array. Double the capacity when size reaches capacity.
         Reduce the size of the array by half when the size is 1/3 of the capacity.
+        Minimum size of 4.
         """
         if(self._size == self._capacity):
             self._capacity *= 2
