@@ -35,10 +35,11 @@ class DynamicArray(DynamicArrayInterface):
 
     def pushback[T](self, n: T) -> None:
         """Add a number (n) to the end of the array. Resize if needed."""
+        self._size += 1
         if(self._capacity == self._size):
             self.resize()
         self._arr[self._size] = n
-        self._size += 1
+        
 
     def popback[T](self) -> T:
         """Remove a number (n) at the end of the array. Resize if needed.
